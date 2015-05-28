@@ -1,2 +1,11 @@
-/ 100
+25/ 100
+Last update Sat May 2 00:12:54 2015 -0700
+
+Error checking for syscalls
+file: [src/ls.cpp] -0
+
+
+-25: bin/ls.*-l flag does not work
+-25: bin/ls.*-R flag does not work
+-25: file/folder parameters do not work
 
