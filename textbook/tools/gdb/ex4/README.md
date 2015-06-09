@@ -8,9 +8,12 @@ $ g++ -g ex4.cpp
 
 ##Using Watch
 
-the `watch` allows you to keep track of a variable passed into it. 
+The `watch`command allows you to keep track of a variable passed into it. 
+
 It will output the previous value and the new value.
+
 Like breakpoints, watchpoints have numbers assigned to them and can be deleted with the `delete` command.
+
 Also like breakpoints, you can use `info` on watchpoints.
 
 In order to use watch, you must first set a breakpoint some where, such as main, for example
@@ -28,14 +31,14 @@ Breakpoint 1, main () at ex4.cpp:9
 9       int n = 0;
 ```
 
-Set a watchpoint using `watch` with a variable name, in this case `val`
+Set a watchpoint using `watch` with a variable name, in this case `val`.
 
 ```
 (gdb) watch val
 Hardware watchpoint 2: val
 ```
 
-Now if you continue using the `continue` command
+Now if you continue using the `continue` command.
 
 ```
 (gdb) c
@@ -49,16 +52,22 @@ main () at ex4.cpp:13
 13      cout << val << endl;
 ```
 
-You can see that the program stops at the watchpoint we had set previously at val
+You can see that the program stops at the watchpoint we had set previously at val.
+
 As you can see, `watch` gives us the old and new values in val.
+
 `watch` works in a similar way to break; it stops the program, but instead of stopping at a certain line or function, `watch` stops when the variable passed into it changes.
+
 Unlike break, watchpoints set by `watch` are deleted when the variable being watched goes out of scope.
 
 ##Using Record and Reverse
 
 The `record` function allows you to record the session of gdb and reverse into it step by step using `reverse`.
+
 In order to use `record` we again must compile the program with the -g flag, as seen above.
+
 We can then, again, set a `break` at the main function, as seen above.
+
 Then, we can use the `record` command
 
 ```
