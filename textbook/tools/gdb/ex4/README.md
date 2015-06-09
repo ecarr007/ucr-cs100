@@ -23,7 +23,7 @@ In order to use watch, you must first set a breakpoint some where, such as main,
 Breakpoint 1 at 0x4009d8: file ex4.cpp, line 9.
 ```
 
-Then you must run the program, then you can set th watch point
+Then you must run the program, then you can set the watch point
 
 ```
 (gdb) r 
